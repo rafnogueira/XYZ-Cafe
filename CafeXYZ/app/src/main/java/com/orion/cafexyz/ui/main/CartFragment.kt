@@ -8,24 +8,24 @@ import android.view.View
 import android.view.ViewGroup
 import com.orion.cafexyz.R
 
-class MainFragment : Fragment() {
+class CartFragment : Fragment() {
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() = CartFragment()
     }
 
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: CartViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.main_fragment, container, false)
+    ): View? {
+        return inflater.inflate(R.layout.cart_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(CartViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
