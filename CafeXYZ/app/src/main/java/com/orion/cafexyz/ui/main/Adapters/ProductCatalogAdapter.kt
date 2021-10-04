@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.product_item.view.*
 import kotlin.random.Random
 
 
-class ProductCatalogAdapter(val context: Context, val productList:MutableList<Product>, val clickCallback: ClickCallback): RecyclerView.Adapter<ProductCatalogAdapter.ProductViewHolder>() {
+class ProductCatalogAdapter(val context: Context, val productList:MutableList<Product>, val clickCallback: ProductCartAdapter.Companion.CartClickCallback): RecyclerView.Adapter<ProductCatalogAdapter.ProductViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
 
